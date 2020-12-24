@@ -1,3 +1,4 @@
+const { purple } = require("tailwindcss/colors");
 const colors = require("tailwindcss/colors");
 module.exports = {
   purge: [],
@@ -12,7 +13,10 @@ module.exports = {
       yellow: colors.amber,
       cyan: colors.cyan,
       rose: colors.rose,
-      pink: colors.pink
+      pink: colors.pink,
+      purple: colors.purple,
+      gray: colors.coolGray,
+      white: "#FFFFFF"
     },
     boxShadow: {
       sideBar: "2px -1px 9px #dadada",

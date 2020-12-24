@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <style>
+      #regForm {
+        background-color: #ffffff;
+        margin: 0 auto;
+        padding: 40px;
+        width: 70%;
+        min-width: 300px;
+      }
+
+      /* Style the input fields */
+      input {
+        padding: 10px;
+        width: 100%;
+        font-size: 17px;
+        font-family: Raleway;
+        border: 1px solid #aaaaaa;
+      }
+
+      /* Mark input boxes that gets an error on validation: */
+      input.invalid {
+        background-color: #ffdddd;
+      }
+
+      /* Hide all steps by default: */
+      .tab {
+        display: none;
+      }
+
+      /* Make circles that indicate the steps of the form: */
+      .step {
+        height: 30px;
+        width: 30px;
+        margin: 0 2px;
+        background-color: #bbbbbb;
+        border: none;
+        border-radius: 50%;
+        display: inline-block;
+        opacity: 0.5;
+      }
+
+      /* Mark the active step: */
+      .step.active {
+        opacity: 1;
+      }
+
+      /* Mark the steps that are finished and valid: */
+      .step.finish {
+        background-color: #4caf50;
+      }
+    </style>
+  </head>
+  <div style=" background-image: url('./images/darzi-images-02.svg');">
+    <div style="margin: 100px auto; ">
+      <!-- Circles which indicates the steps of the form: -->
+      <div
+        style="display: flex;justify-content: space-between; width: 70%; margin: auto;"
+      >
+        <label for=""><span class="step"></span> 1</label>
+
+        __________________________
+        <label for=""><span class="step"></span> 1</label>
+        __________________________
+        <label for=""><span class="step"></span> 1</label>
+        __________________________
+        <label for=""><span class="step"></span> 1</label>
+      </div>
+      <form id="regForm" action="">
+        <h1>Register:</h1>
+
+        <!-- One "tab" for each step in the form: -->
+        <div class="tab">
+          <p>
+            <input
+              placeholder="First name..."
+              oninput="this.className = ''"
+              required
+            />
+          </p>
+          <p>
+            <input
+              placeholder="Last name..."
+              oninput="this.className = ''"
+              required
+            />
+          </p>
+        </div>
+
+        <div class="tab">
+          Contact Info:
+          <p><input placeholder="E-mail..." oninput="this.className = ''" /></p>
+          <p><input placeholder="Phone..." oninput="this.className = ''" /></p>
+        </div>
+
+        <div class="tab">
+          Birthday:
+          <p><input placeholder="dd" oninput="this.className = ''" /></p>
+          <p><input placeholder="mm" oninput="this.className = ''" /></p>
+          <p><input placeholder="yyyy" oninput="this.className = ''" /></p>
+        </div>
+
+        <div class="tab">
+          Login Info:
+          <p>
+            <input placeholder="Username..." oninput="this.className = ''" />
+          </p>
+          <p>
+            <input placeholder="Password..." oninput="this.className = ''" />
+          </p>
+        </div>
+
+        <div style="overflow:auto;">
+          <div style="float:right;">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">
+              Previous
+            </button>
+            <button type="button" id="nextBtn" onclick="nextPrev(1)">
+              Next
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</html>
+<script src="./step.js"></script>

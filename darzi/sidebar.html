@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../tailwind.css" />
+    <link href="../fontawesome/css/all.css" rel="stylesheet" />
+    <title>Document</title>
+    <style>
+      .back {
+        background-image: url("./images/darzi-images-01.svg");
+        background-size: cover;
+      }
+      ul li span{
+          padding: 1rem;
+      }
+      ul li:hover {
+        font-size: 1.2rem;
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(5px);
+        line-height: 3rem;
+        border-radius: 5px;
+      }
+      .menu:hover{
+          
+        background-color: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(5px);
+        width: 2rem;
+    height: 2rem;
+    
+        border-radius: 5px;
+      }
+
+.text{
+    display: inline;
+}
+
+    </style>
+  </head>
+  <body>
+      <div class="flex">
+    <div id="mySidebar" class=" bg-purple-600 w-1/5 h-screen back">
+     <span id="menu-btn" onclick="menu()" class="text-white text-xl p-2.5 flex justify-end">   <i id="menu-icon" class="menu w-8 p-1.5 h-8 fas fa-bars"></i></span>
+      <img id="logo" class="py-5 m-auto w-20" src="./images/2.svg" alt="" srcset="" />
+      <ul class=" text-white uppercase px-3 leading-8 w-full text-justify">
+        <li class="">
+          <span>
+            <i class="fas fa-tachometer-alt"></i>
+           <a  class="text"> Dashboard </a>
+          </span>
+        </li>
+        <li>
+            <span>
+          <i class="fas fa-users"></i>
+         <a class="text"> customers</a>
+        </li>
+        </span>
+        <li>
+            <span>
+          <i class="fas fa-cogs"></i>
+         <a class="text"> settings </a>
+       </span>
+        </li>
+        
+      </ul>
+    </div>
+    <div id="main" class=" bg-gray-400 w-screen">hello</div>
+    </div>
+  </body>
+</html>
+
+<script>
+     var bar_status = 0;
+    function menu() {
+        
+       
+        if (bar_status===0) {
+            
+    
+        
+    var divsToHide = document.getElementsByClassName("text"); //divsToHide is an array
+
+    for(var i = 0; i < divsToHide.length; i++){ 
+        divsToHide[i].style.display = "none"; // depending on what you're doing
+    }
+ 
+    document.getElementById("mySidebar").classList.add('w-20');
+    document.getElementById("mySidebar").classList.remove("w-1/5"); 
+
+    document.getElementById("menu-btn").classList.add('justify-center');
+        document.getElementById("menu-btn").classList.remove('justify-end');
+
+    document.getElementById("logo").classList.add('w-12');
+    document.getElementById('logo').classList.remove('w-20');
+
+
+    document.getElementById("menu-icon").classList.add('fa-expand-alt');
+    document.getElementById('menu-icon').classList.remove('fa-bars');
+
+    bar_status=1;
+  }
+  else{
+      
+          var divsToHide = document.getElementsByClassName("text"); //divsToHide is an array
+
+    for(var i = 0; i < divsToHide.length; i++){ 
+        divsToHide[i].style.display = "inline"; // depending on what you're doing
+    }
+ 
+    document.getElementById("mySidebar").classList.add('w-1/5');
+    document.getElementById("mySidebar").classList.remove("w-20"); 
+
+    document.getElementById("menu-btn").classList.add('justify-end');
+        document.getElementById("menu-btn").classList.remove('justify-center');
+
+    document.getElementById("logo").classList.add('w-20');
+    document.getElementById('logo').classList.remove('w-12');
+
+
+   
+    document.getElementById('menu-icon').classList.add('fa-bars');
+ document.getElementById("menu-icon").classList.remove('fa-expand-alt');
+     bar_status=0;
+  }
+    }
+</script>
