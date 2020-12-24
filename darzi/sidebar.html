@@ -30,7 +30,10 @@
     
         border-radius: 5px;
       }
-
+.glass{
+     
+        backdrop-filter: blur(5px);
+}
 .text{
     display: inline;
 }
@@ -38,6 +41,8 @@
     </style>
   </head>
   <body>
+
+  <!-- sidebar -->
       <div class="flex">
     <div id="mySidebar" class=" bg-purple-600 w-1/5 h-screen back">
      <span id="menu-btn" onclick="menu()" class="text-white text-xl p-2.5 flex justify-end">   <i id="menu-icon" class="menu w-8 p-1.5 h-8 fas fa-bars"></i></span>
@@ -64,7 +69,58 @@
         
       </ul>
     </div>
-    <div id="main" class=" bg-gray-400 w-screen">hello</div>
+    <!-- sidebarend -->
+    <div id="main" class=" bg-gray-100 w-screen">
+
+      <!-- navbar -->
+      <header class=" bg-white mx-1 h-12 flex shadow-md justify-between">
+        <div class="p-1 m-1">
+        <input class=" bg-gray-100 p-1 rounded-l-md " type="text" placeholder="search">
+        <button class=" bg-purple-400 -m-1 p-1 w-6 rounded-r-md text-white"><i class="fas fa-search"></i></button>
+        </div>
+        <img class="w-10 h-10 m-1 rounded-full bg-gray-300 " src="./images/1.svg" alt="">
+      </header>
+      <!-- navbarend -->
+
+      <!-- heading -->
+
+      <section class=" flex justify-between mx-1 my-2 h-12">
+        <span class="p-3"><label class="mx-3 uppercase text-xl text-gray-400">Dshboard</label>|<label class="mx-3 text-gray-400">December <a class=" text-purple-500">2020</a clas></label></span>
+        <button class="btn bg-purple-600 hover:bg-purple-800 p-1 w-28 rounded-lg text-sm m-2 text-white"><i class="fas fa-plus"></i> New Order</button>
+      </section>
+
+       <!-- headingend -->
+
+       <!-- tabs -->
+
+        <section class=" h-32 m-1 flex justify-start">
+
+          <div class=" bg-blue-600 w-3/12 m-4 flex justify-start rounded-xl shadow-md">
+            <section class="bg-white w-3/12 m-4 rounded-full p-5">helo</section>
+            <section><h1 class="text-white uppercase text-sm pt-4">receiveable</h1><h1 class="text-white text-4xl">19,600</h1></section>
+          </div>
+
+           <div class=" bg-purple-600 w-3/12 m-4 flex justify-start rounded-xl shadow-md">
+            <section class="bg-white w-3/12 m-4 rounded-full p-5">helo</section>
+            <section><h1 class="text-white uppercase text-sm pt-4">payable</h1><h1 class="text-white text-4xl">19,600</h1></section>
+          </div>
+
+            <div class=" bg-purple-400 w-3/12 m-4 flex justify-start rounded-xl shadow-md">
+            <section class="bg-white w-3/12 m-4 rounded-full p-5">helo</section>
+            <section><h1 class="text-white uppercase text-sm pt-4">Total income</h1><h1 class="text-white text-4xl">19,600</h1></section>
+            </div>
+      
+          </section>
+
+      <!-- tabsend -->
+
+      <!-- footer -->
+       <footer class=" border-t border-purple-300 self-center align-middle flex px-4 justify-between  mr-14 w-9/12 fixed bottom-0 right-0">
+        <span class=" text-gray-400 uppercase text-sm py-1">Copyright by <a class=" text-purple-300">zalvatech</a> </span>
+        <span class=" text-gray-400 uppercase text-sm p-1">version <a class=" text-purple-300">1.0</a></span>
+      </footer>
+ <!-- footerend -->
+    </div>
     </div>
   </body>
 </html>
