@@ -16,7 +16,8 @@ module.exports = {
       pink: colors.pink,
       purple: colors.purple,
       gray: colors.coolGray,
-      white: "#FFFFFF"
+      white: "#FFFFFF",
+      green: colors.green
     },
     boxShadow: {
       sideBar: "2px -1px 9px #dadada",
