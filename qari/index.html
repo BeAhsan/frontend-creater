@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../tailwind.css" />
+    <title>Document</title>
+    <style>
+      .nav {
+        background: rgba(27, 27, 27, 0.25);
+
+        backdrop-filter: blur(5.5px);
+        -webkit-backdrop-filter: blur(5.5px);
+      }
+      .backimg {
+        background-image: url("./images/background.svg");
+      }
+
+      .service-back {
+        background-image: url("./images/service-back.svg");
+        background-size: cover;
+      }
+
+      @font-face {
+        font-family: hurme;
+        src: url(../HGSFF/hurme1/HurmeGeometricSans1.otf);
+      }
+    </style>
+  </head>
+  <body style="font-family: hurme;">
+    <div>
+      <!-- navbar -->
+      <nav class="w-full h-16 nav shadow-md fixed">
+        <ul
+          class=" items-center content-center text-white flex justify-between p-2 text-xl"
+        >
+          <li><img class=" w-14" src="../darzi/images/1.svg" alt="" /></li>
+          <li><a class=" hover:text-yellow-300 " href="#home">Home</a></li>
+          <li><a class="hover:text-yellow-300" href="#about">About</a></li>
+          <li>
+            <a class=" hover:text-yellow-300" href="#services">Services </a>
+          </li>
+          <li><a class="hover:text-yellow-300" href="#">Dowloads</a></li>
+          <li><a class="hover:text-yellow-300" href="#contact">Contact</a></li>
+          <li>
+            <button class="p-1 text-sm h-10  w-44 rounded-3xl  bg-yellow-300">
+              TRIAL CLASSES
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <!-- navbarend -->
+
+      <!-- banner -->
+      <section id="home" class="backimg  w-full h-screen content-center">
+        <div class=" py-52 text-center  ">
+          <h1 class="text-white text-5xl mb-3 font-bold">
+            Learn Everything from Home
+          </h1>
+          <img
+            class="my-0 m-auto w-80 mb-8"
+            src="./images/divider.svg"
+            alt=""
+            srcset=""
+          />
+          <button
+            class="inline-block  p-1 text-sm h-10 text-white w-44 rounded-3xl  bg-yellow-300"
+          >
+            CONTACT US
+          </button>
+        </div>
+      </section>
+      <!-- bannerend -->
+
+      <!-- about -->
+      <section id="about" class="  w-full h-screen">
+        <div class="  flex p-20  h-4/6">
+          <div class="content-center w-6/12 about-img h-full">
+            <img
+              class="p-20 -my-24 mx-0"
+              src="./images/about.svg"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div class=" w-6/12 m-12 h-full">
+            <h1>Few Words About</h1>
+            <h1
+              class=" w-max text-xl mb-4 uppercase text-yellow-300 border-gray-500 border-b"
+            >
+              History of Center
+            </h1>
+            <p class="text-gray-600">
+              Since 1987, Our institution guiding students and people around the
+              world. Helping others in every community and region with
+              astonishing facilities. Since 1987, Our institution guiding
+              students.
+            </p>
+          </div>
+        </div>
+        <div class=" flex justify-evenly h-2/6 p-3">
+          <div class=" text-center flex-row justify-self-auto  w-48  h-full">
+            <img
+              class="w-20 m-auto"
+              src="./images/salah.svg"
+              alt=""
+              srcset=""
+            />
+            <h1 class="font-bold text-yellow-300">Salah</h1>
+            <p class=" text-gray-500 text-xs">
+              Salat Pillar of Islam dolor amet, consectetur adipiscing.
+            </p>
+          </div>
+
+          <div class=" text-center flex-row justify-self-auto  w-48  h-full">
+            <img class="w-20 m-auto" src="./images/swam.svg" alt="" srcset="" />
+            <h1 class="font-bold text-yellow-300">Sawm</h1>
+            <p class=" text-gray-500 text-xs">
+              SRoza is another, pillar islamic religion adipiscing.
+            </p>
+          </div>
+
+          <div class=" text-center flex-row justify-self-auto  w-48  h-full">
+            <img
+              class="w-20 m-auto"
+              src="./images/quran.svg"
+              alt=""
+              srcset=""
+            />
+            <h1 class="font-bold text-yellow-300">Quran</h1>
+            <p class=" text-gray-500 text-xs">
+              Islamic values gives some rules, consectetur adipiscing.
+            </p>
+          </div>
+
+          <div class=" text-center flex-row justify-self-auto  w-48  h-full">
+            <img class="w-20 m-auto" src="./images/hajj.svg" alt="" srcset="" />
+            <h1 class="font-bold text-yellow-300">Hajj</h1>
+            <p class=" text-gray-500 text-xs">
+              Only people who have amet, consectetur adipiscing.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- aboutend -->
+
+      <!-- services -->
+      <section id="services" class=" text-center service-back w-full h-screen">
+        <div class="h-screen p-24">
+          <h1>Our Services</h1>
+          <h1 class="text-yellow-300 font-bold text-2xl">Serving Humanity</h1>
+          <img
+            class=" w-32 m-auto"
+            src="./images/divider-dark.svg"
+            alt=""
+            srcset=""
+          />
+          <div
+            class=" sm:grid-cols-4  grid grid-cols-2 gap-x-8 gap-y-2 place-items-stretch h-96 place-content-stretch"
+          >
+            <div class=" bg-white rounded-2xl shadow-md ">helo</div>
+            <div class=" bg-white rounded-2xl shadow-md ">helo</div>
+            <div class=" bg-white rounded-2xl shadow-md">helo</div>
+            <div class=" bg-white rounded-2xl shadow-md ">helo</div>
+            <div class=" bg-white rounded-2xl shadow-md ">helo</div>
+            <div class=" bg-white rounded-2xl shadow-md ">helo</div>
+            <div class=" bg-white rounded-2xl shadow-md ">helo</div>
+            <div class=" bg-white rounded-2xl shadow-md ">helo</div>
+          </div>
+        </div>
+      </section>
+      <!-- servicesend -->
+
+      <!-- contact -->
+      <section id="contact" class=" bg-yellow-700 w-full h-screen"></section>
+      <!-- contactend -->
+    </div>
+  </body>
+</html>
