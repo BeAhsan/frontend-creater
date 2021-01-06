@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../tailwind.css" />
+    <link href="../fontawesome/css/all.css" rel="stylesheet" />
     <title>Document</title>
     <style>
       .nav {
@@ -14,11 +15,18 @@
       }
       .backimg {
         background-image: url("./images/background.svg");
+        background-size: cover;
       }
 
       .service-back {
         background-image: url("./images/service-back.svg");
         background-size: cover;
+      }
+
+      .about-back {
+        background-image: url("./images/about-img-light.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
       }
 
       @font-face {
@@ -34,16 +42,20 @@
         <ul
           class=" items-center content-center text-white flex justify-between p-2 text-xl"
         >
-          <li><img class=" w-14" src="../darzi/images/1.svg" alt="" /></li>
+          <li><img class="-mt-1 w-32" src="./images/logo.svg" alt="" /></li>
           <li><a class=" hover:text-yellow-300 " href="#home">Home</a></li>
-          <li><a class="hover:text-yellow-300" href="#about">About</a></li>
-          <li>
-            <a class=" hover:text-yellow-300" href="#services">Services </a>
+           
+            <a class=" hover:text-yellow-300" href="#services">Courses </a>
           </li>
-          <li><a class="hover:text-yellow-300" href="#">Dowloads</a></li>
+          <li><a class="hover:text-yellow-300" href="#courses">Fee</a></li>
+          <li>
+            <a class="hover:text-yellow-300" href="#downlaods">Dowloads</a>
+          </li>
           <li><a class="hover:text-yellow-300" href="#contact">Contact</a></li>
           <li>
-            <button class="p-1 text-sm h-10  w-44 rounded-3xl  bg-yellow-300">
+            <button
+              class="p-1 text-sm h-10  w-44 rounded-3xl  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 bg-yellow-300"
+            >
               TRIAL CLASSES
             </button>
           </li>
@@ -54,17 +66,17 @@
       <!-- banner -->
       <section id="home" class="backimg  w-full h-screen content-center">
         <div class=" py-52 text-center  ">
-          <h1 class="text-white text-5xl mb-3 font-bold">
+          <h3 class="text-white text-5xl mb-3 font-bold">
             Learn Everything from Home
-          </h1>
+          </h3>
           <img
-            class="my-0 m-auto w-80 mb-8"
+            class="my-0 m-auto w-80 mb-8 animate-pulse"
             src="./images/divider.svg"
             alt=""
             srcset=""
           />
           <button
-            class="inline-block  p-1 text-sm h-10 text-white w-44 rounded-3xl  bg-yellow-300"
+            class="inline-block  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 p-1 text-sm h-10 text-white w-44 rounded-3xl  bg-yellow-300"
           >
             CONTACT US
           </button>
@@ -73,7 +85,7 @@
       <!-- bannerend -->
 
       <!-- about -->
-      <section id="about" class="  w-full h-screen">
+      <section id="about" class=" about-back w-full h-screen">
         <div class="  flex p-20  h-4/6">
           <div class="content-center w-6/12 about-img h-full">
             <img
@@ -84,12 +96,12 @@
             />
           </div>
           <div class=" w-6/12 m-12 h-full">
-            <h1>Few Words About</h1>
-            <h1
+            <h3>Few Words About</h3>
+            <h3
               class=" w-max text-xl mb-4 uppercase text-yellow-300 border-gray-500 border-b"
             >
               History of Center
-            </h1>
+            </h3>
             <p class="text-gray-600">
               Since 1987, Our institution guiding students and people around the
               world. Helping others in every community and region with
@@ -106,16 +118,16 @@
               alt=""
               srcset=""
             />
-            <h1 class="font-bold text-yellow-300">Salah</h1>
-            <p class=" text-gray-500 text-xs">
+            <h3 class="font-bold text-xl text-yellow-300">Salah</h3>
+            <p class=" text-gray-500 text-sm">
               Salat Pillar of Islam dolor amet, consectetur adipiscing.
             </p>
           </div>
 
           <div class=" text-center flex-row justify-self-auto  w-48  h-full">
             <img class="w-20 m-auto" src="./images/swam.svg" alt="" srcset="" />
-            <h1 class="font-bold text-yellow-300">Sawm</h1>
-            <p class=" text-gray-500 text-xs">
+            <h3 class="font-bold text-xl text-yellow-300">Sawm</h3>
+            <p class=" text-gray-500 text-sm">
               SRoza is another, pillar islamic religion adipiscing.
             </p>
           </div>
@@ -127,16 +139,16 @@
               alt=""
               srcset=""
             />
-            <h1 class="font-bold text-yellow-300">Quran</h1>
-            <p class=" text-gray-500 text-xs">
+            <h3 class="font-bold text-xl text-yellow-300">Quran</h3>
+            <p class=" text-gray-500 text-sm">
               Islamic values gives some rules, consectetur adipiscing.
             </p>
           </div>
 
           <div class=" text-center flex-row justify-self-auto  w-48  h-full">
             <img class="w-20 m-auto" src="./images/hajj.svg" alt="" srcset="" />
-            <h1 class="font-bold text-yellow-300">Hajj</h1>
-            <p class=" text-gray-500 text-xs">
+            <h3 class="font-bold text-xl text-yellow-300">Hajj</h3>
+            <p class=" text-gray-500 text-sm">
               Only people who have amet, consectetur adipiscing.
             </p>
           </div>
@@ -147,33 +159,571 @@
       <!-- services -->
       <section id="services" class=" text-center service-back w-full h-screen">
         <div class="h-screen p-24">
-          <h1>Our Services</h1>
-          <h1 class="text-yellow-300 font-bold text-2xl">Serving Humanity</h1>
+          <h3>Our Courses</h3>
+          <h3 class="text-yellow-300 font-bold text-2xl">Serving Humanity</h3>
           <img
-            class=" w-32 m-auto"
+            class=" w-32 m-auto animate-pulse"
             src="./images/divider-dark.svg"
             alt=""
             srcset=""
           />
           <div
-            class=" sm:grid-cols-4  grid grid-cols-2 gap-x-8 gap-y-2 place-items-stretch h-96 place-content-stretch"
+            class=" sm:grid-cols-4  grid grid-cols-2 gap-x-4 gap-y-4 place-items-stretch h-96 place-content-stretch"
           >
-            <div class=" bg-white rounded-2xl shadow-md ">helo</div>
-            <div class=" bg-white rounded-2xl shadow-md ">helo</div>
-            <div class=" bg-white rounded-2xl shadow-md">helo</div>
-            <div class=" bg-white rounded-2xl shadow-md ">helo</div>
-            <div class=" bg-white rounded-2xl shadow-md ">helo</div>
-            <div class=" bg-white rounded-2xl shadow-md ">helo</div>
-            <div class=" bg-white rounded-2xl shadow-md ">helo</div>
-            <div class=" bg-white rounded-2xl shadow-md ">helo</div>
+            <div class=" bg-white rounded-2xl shadow-md ">
+              <div class="p-4">
+                <h3 class=" text-lightBlue-900 text-xl font-black">
+                  Islamic Studies
+                </h3>
+                <p class=" text-gray-500 text-sm">
+                  Salat Pillar of Islam dolor amet, consectetur adipiscing.
+                </p>
+              </div>
+            </div>
+
+            <div class=" bg-white rounded-2xl shadow-md ">
+              <div class="p-4">
+                <h3 class=" text-lightBlue-900 text-xl font-black">
+                  Noorani Qaida
+                </h3>
+                <p class=" text-gray-500 text-sm">
+                  Salat Pillar of Islam dolor amet, consectetur adipiscing.
+                </p>
+              </div>
+            </div>
+
+            <div class=" bg-white rounded-2xl shadow-md ">
+              <div class="p-4">
+                <h3 class=" text-lightBlue-900 text-xl font-black">
+                  Quran with Tajweed
+                </h3>
+                <p class=" text-gray-500 text-sm">
+                  Salat Pillar of Islam dolor amet, consectetur adipiscing.
+                </p>
+              </div>
+            </div>
+
+            <div class=" bg-white rounded-2xl shadow-md ">
+              <div class="p-4">
+                <h3 class=" text-lightBlue-900 text-xl font-black">
+                  Quran Memorization
+                </h3>
+                <p class=" text-gray-500 text-sm">
+                  Salat Pillar of Islam dolor amet, consectetur adipiscing.
+                </p>
+              </div>
+            </div>
+
+            <div class=" bg-white rounded-2xl shadow-md ">
+              <div class="p-4">
+                <h3 class=" text-lightBlue-900 text-xl font-black">
+                  Noorani Qaida
+                </h3>
+                <p class=" text-gray-500 text-sm">
+                  Salat Pillar of Islam dolor amet, consectetur adipiscing.
+                </p>
+              </div>
+            </div>
+
+            <div class=" bg-white rounded-2xl shadow-md ">
+              <div class="p-4">
+                <h3 class=" text-lightBlue-900 text-xl font-black">
+                  Noorani Qaida
+                </h3>
+                <p class=" text-gray-500 text-sm">
+                  Salat Pillar of Islam dolor amet, consectetur adipiscing.
+                </p>
+              </div>
+            </div>
+
+            <div class=" bg-white rounded-2xl shadow-md ">
+              <div class="p-4">
+                <h3 class=" text-lightBlue-900 text-xl font-black">
+                  Noorani Qaida
+                </h3>
+                <p class=" text-gray-500 text-sm">
+                  Salat Pillar of Islam dolor amet, consectetur adipiscing.
+                </p>
+              </div>
+            </div>
+
+            <div class=" bg-white rounded-2xl shadow-md ">
+              <div class="p-4">
+                <h3 class=" text-lightBlue-900 text-xl font-black">
+                  Noorani Qaida
+                </h3>
+                <p class=" text-gray-500 text-sm">
+                  Salat Pillar of Islam dolor amet, consectetur adipiscing.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <!-- servicesend -->
 
+      <!-- countdown -->
+      <section class="w-full backimg h-64">
+        <div
+          class="sm:grid-cols-4 text-white grid grid-cols-2 gap-x-8  text-center place-content-stretch p-20"
+        >
+          <div class="border-r counter">
+            <h3 class="text-yellow-300 font-extrabold text-6xl counter-count">
+              1000+
+            </h3>
+            <h3 class=" text-2xl">Happy Students</h3>
+          </div>
+          <div class="border-r">
+            <h3 class="text-yellow-300 font-extrabold text-6xl">16+</h3>
+            <h3 class=" text-2xl">Countries Globally</h3>
+          </div>
+
+          <div class="border-r">
+            <h3 class="text-yellow-300 font-extrabold text-6xl">150+</h3>
+            <h3 class=" text-2xl">Qualified Teachers</h3>
+          </div>
+
+          <div class="">
+            <h3 class="text-yellow-300 font-extrabold text-6xl">50+</h3>
+            <h3 class=" text-2xl">Course Done</h3>
+          </div>
+        </div>
+      </section>
+      <!-- countdownend -->
+
+      <!-- Courses -->
+      <section id="courses" class=" text-center  w-full h-screen">
+        <div class="h-screen p-24">
+          
+          <h3 class="text-yellow-300 font-bold text-2xl">Fee Structure</h3>
+          <img
+            class=" w-32 m-auto animate-pulse"
+            src="./images/divider-dark.svg"
+            alt=""
+            srcset=""
+          />
+          <div
+            class="grid grid-cols-3 gap-x-8 gap-y-2 place-items-stretch h-96 place-content-stretch "
+          >
+            <div class="shadow-md rounded-2xl">
+              <header class=" rounded-t-2xl bg-yellow-300 w-full h-24 p-6">
+                <h3 class=" text-lightBlue-900 text-xl font-black">
+                  Trial Classes
+                </h3>
+                <h3 class=" text-white text-3xl font-extrabold">
+                  FREE
+                </h3>
+              </header>
+              <ul class=" mt-10">
+                <li class="border-b border-yellow-300 mb-4 w-max m-auto">
+                  Lecture Duration: 30 mins
+                </li>
+                <li class="border-b border-yellow-300 mb-4 w-max m-auto">
+                  Trial Duration: One Week
+                </li>
+                <li class=" mb-4 w-max m-auto">
+                  Admission: Free
+                </li>
+              </ul>
+              <button
+                class=" mt-16 uppercase bg-gray-700 p-3 text-white w-3/6 rounded-3xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 "
+              >
+                Book
+              </button>
+            </div>
+
+            <div class="shadow-md rounded-2xl">
+              <header class=" rounded-t-2xl bg-yellow-300 w-full h-24 p-6">
+                <h3 class=" text-lightBlue-900 text-xl font-black">
+                  3 Days / Week
+                </h3>
+                <h3 class=" text-white text-3xl font-extrabold">
+                  $40 | €30
+                </h3>
+              </header>
+              <ul class=" mt-10">
+                <li class="border-b border-yellow-300 mb-4 w-max m-auto">
+                  Lecture Duration: 30 mins
+                </li>
+                <li class="border-b border-yellow-300 mb-4 w-max m-auto">
+                  Days: 3 Per Week
+                </li>
+                <li class="border-b border-yellow-300 mb-4 w-max m-auto">
+                  Admission: Free
+                </li>
+                <li class=" mb-4 w-max m-auto">
+                  2nd Student: 10% Off
+                </li>
+              </ul>
+              <button
+                class=" mt-5 uppercase bg-gray-700 p-3 text-white w-3/6 rounded-3xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 "
+              >
+                Book
+              </button>
+            </div>
+
+            <div class="shadow-md rounded-2xl">
+              <header class=" rounded-t-2xl bg-yellow-300 w-full h-24 p-6">
+                <h3 class=" text-lightBlue-900 text-xl font-black">
+                  5 Days / Week
+                </h3>
+                <h3 class=" text-white text-3xl font-extrabold">
+                  $55 | €45
+                </h3>
+              </header>
+              <ul class=" mt-10">
+                <li class="border-b border-yellow-300 mb-4 w-max m-auto">
+                  Lecture Duration: 30 mins
+                </li>
+                <li class="border-b border-yellow-300 mb-4 w-max m-auto">
+                  Days: 5 Per Week
+                </li>
+                <li class="border-b border-yellow-300 mb-4 w-max m-auto">
+                  Admission: Free
+                </li>
+                <li class=" mb-4 w-max m-auto">
+                  2nd Student: 10% Off
+                </li>
+              </ul>
+              <button
+                class=" mt-5 uppercase bg-gray-700 p-3 text-white w-3/6 rounded-3xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 "
+              >
+                Book
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Coursesend -->
+
+      <!-- downloads -->
+      <section
+        id="downlaods"
+        class=" text-center service-back  w-full h-screen"
+      >
+        <div class="h-screen p-24">
+          <h3 class="text-yellow-300 font-bold text-2xl">Downloads</h3>
+          <img
+            class=" w-32 m-auto animate-pulse"
+            src="./images/divider-dark.svg"
+            alt=""
+            srcset=""
+          />
+          <ul class="px-20">
+            <li
+              class="flex justify-between  border-b border-yellow-300 leading-10"
+            >
+              <h2>
+                Madni Qaida.pdf <small class=" text-gray-500">58.9 MB</small>
+              </h2>
+              <h2>Download <i class="fas fa-arrow-down animate-bounce"></i></h2>
+            </li>
+            <li
+              class="flex justify-between  border-b border-yellow-300 leading-10"
+            >
+              <h2>
+                Madni Qaida.pdf <small class=" text-gray-500">58.9 MB</small>
+              </h2>
+              <h2>Download <i class="fas fa-arrow-down animate-bounce"></i></h2>
+            </li>
+            <li
+              class="flex justify-between  border-b border-yellow-300 leading-10"
+            >
+              <h2>
+                Madni Qaida.pdf <small class=" text-gray-500">58.9 MB</small>
+              </h2>
+              <h2>Download <i class="fas fa-arrow-down animate-bounce"></i></h2>
+            </li>
+            <li
+              class="flex justify-between border-b border-yellow-300 leading-10"
+            >
+              <h2>
+                Madni Qaida.pdf <small class=" text-gray-500">58.9 MB</small>
+              </h2>
+              <h2>Download <i class="fas fa-arrow-down animate-bounce"></i></h2>
+            </li>
+            <li
+              class="flex justify-between  border-b border-yellow-300 leading-10"
+            >
+              <h2>
+                Madni Qaida.pdf <small class=" text-gray-500">58.9 MB</small>
+              </h2>
+              <h2>Download <i class="fas fa-arrow-down animate-bounce"></i></h2>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- downloadsend -->
+
+      <!-- feedback -->
+      <section id="" class=" text-center backimg w-full h-screen">
+        <div class="h-screen p-24">
+          <h3 class="text-white">What our</h3>
+          <h3 class="text-yellow-300 font-bold text-2xl">Students Say</h3>
+          <img
+            class=" w-44 m-auto animate-pulse"
+            src="./images/divider-white.svg"
+            alt=""
+            srcset=""
+          />
+          <div
+            class=" text-gray-50 border-yellow-300 border w-full h-60 mx-auto my-16"
+          >
+            <img
+              class="h-28 w-28 mx-auto border-4 -mt-14 antialiased border-yellow-400 rounded-full"
+              src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=facearea&amp;facepad=4&amp;w=256&amp;h=256&amp;q=60"
+              alt=""
+            />
+            <p class="text-3xl p-10">
+              <i class="text-yellow-400">“</i> Our courses are designed to
+              educate and empower our children with the requisite knowledge of
+              their religion in the light of a changing world<i
+                class="text-yellow-300"
+                >”</i
+              >.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- feedback -->
+
       <!-- contact -->
-      <section id="contact" class=" bg-yellow-700 w-full h-screen"></section>
+      <section id="contact" class=" text-center about-back w-full h-screen">
+        <div class="h-screen p-24">
+          <h3>Have any Questions...!</h3>
+          <h3 class="text-yellow-300 font-bold text-2xl">
+            Contact Information
+          </h3>
+          <img
+            class=" w-32 m-auto mb-4 animate-pulse"
+            src="./images/divider-dark.svg"
+            alt=""
+            srcset=""
+          />
+          <div
+            class="grid grid-cols-3 gap-x-8 gap-y-2 place-items-stretch h-60 place-content-stretch"
+          >
+            <div class=" bg-yellow-300 shadow-md">
+              <img
+                class="w-28 mx-auto"
+                src="./images/phone-light.svg"
+                alt=""
+                srcset=""
+              />
+              <h3 class=" text-blue-900 font-extrabold text-2xl">
+                Our Location
+              </h3>
+              <p class=" text-gray-700">
+                Khanna Pull, Islambad, Capital Territory, Pakistan
+              </p>
+            </div>
+            <div class=" bg-yellow-300 shadow-md">
+              <img
+                class="w-28 mx-auto"
+                src="./images/mail-light.svg"
+                alt=""
+                srcset=""
+              />
+              <h3 class=" text-blue-900 font-extrabold text-2xl">
+                Contact Us
+              </h3>
+              <p class=" text-gray-700">
+                +92 349 2140170
+              </p>
+              <p class=" text-gray-700">
+                +92 349 2140170
+              </p>
+            </div>
+            <div class=" bg-yellow-300 shadow-md">
+              <img
+                class="w-28 mx-auto"
+                src="./images/location-light.svg"
+                alt=""
+                srcset=""
+              />
+              <h3 class=" text-blue-900 font-extrabold text-2xl">
+                Write Some Words
+              </h3>
+              <p class=" text-gray-700">
+                Support@islamicscholarscenter.com
+              </p>
+              <p class=" text-gray-700">
+                info@islamicscholarscenter.com
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class=" text-center w-full h-screen">
+        <div class="h-screen p-24">
+          <h3>Have any Questions...!</h3>
+          <h3 class="text-yellow-300 font-bold text-2xl">
+            Send Us Message
+          </h3>
+          <img
+            class=" w-32 m-auto mb-4 animate-pulse"
+            src="./images/divider-dark.svg"
+            alt=""
+            srcset=""
+          />
+          <form action="" method="post">
+            <div class="flex mx-10">
+              <input
+                type="text"
+                class="w-1/2 border border-yellow-300 p-3 mx-2"
+                placeholder="Name"
+              />
+              <input
+                type="text"
+                class="w-1/2 border border-yellow-300 p-3 mx-2"
+                placeholder="Phone"
+              />
+            </div>
+            <div class="flex mt-4 mx-10">
+              <input
+                type="text"
+                class="w-1/2 border border-yellow-300 p-3 mx-2"
+                placeholder="Email"
+              />
+              <input
+                type="text"
+                class="w-1/2 border border-yellow-300 p-3 mx-2"
+                placeholder="Subject"
+              />
+            </div>
+            <textarea
+              name=""
+              id=""
+              class="border p-3 mt-4 mx-12 border-yellow-300 resize-none"
+              placeholder="Subject"
+              cols="119"
+              rows="6"
+            ></textarea>
+            <button
+              class="p-2 mt-5 text-sm h-10  w-44 rounded-3xl uppercase text-white transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 bg-yellow-300"
+            >
+              submit
+            </button>
+          </form>
+        </div>
+      </section>
       <!-- contactend -->
+
+      <!-- footer -->
+      <footer class=" bg-gray-800 w-full h-80">
+        <header
+          class="flex justify-between mx-20 my-0 pb-0 p-3 border-b border-white"
+        >
+          <img class="-mt-1 w-32" src="./images/logo.svg" alt="" />
+          <button
+            class="p-1 text-sm h-10 text-white  w-44 rounded-3xl  transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 bg-yellow-300"
+          >
+            TRIAL CLASSES
+          </button>
+        </header>
+        <div
+          class="sm:grid-cols-4 text-white grid grid-cols-2 gap-x-8   place-content-stretch pt-2 mx-20 "
+        >
+          <div>
+            <h2 class=" uppercase text-bold text-xl">about</h2>
+            <p class="text-sm">
+              Our institution guiding students and people around the world.
+              Helping others in every community and region with astonishing
+              facilities.
+            </p>
+            <ul class="flex">
+              <li>
+                <img class="w-10" src="./images/twiter.svg" alt="" srcset="" />
+              </li>
+              <li>
+                <img
+                  class="w-10"
+                  src="./images/facebook.svg"
+                  alt=""
+                  srcset=""
+                />
+              </li>
+              <li>
+                <img class="w-10" src="./images/ig.svg" alt="" srcset="" />
+              </li>
+              <li>
+                <img class="w-10" src="./images/youtube.svg" alt="" srcset="" />
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class=" uppercase text-bold text-xl">Usefull Links</h2>
+            <ul>
+              <ul class=" items-center content-center text-white  text-sm">
+                <li>
+                  <a class=" hover:text-yellow-300 " href="#home">Home</a>
+                </li>
+                <li>
+                  <a class="hover:text-yellow-300" href="#about">About</a>
+                </li>
+                <li>
+                  <a class=" hover:text-yellow-300" href="#services"
+                    >Services
+                  </a>
+                </li>
+                <li>
+                  <a class="hover:text-yellow-300" href="#courses">Courses</a>
+                </li>
+                <li>
+                  <a class="hover:text-yellow-300" href="#downlaods"
+                    >Dowloads</a
+                  >
+                </li>
+                <li>
+                  <a class="hover:text-yellow-300" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </ul>
+          </div>
+          <div>
+            <h2 class=" uppercase text-bold text-xl">Working Hours</h2>
+            <ul class="text-sm">
+              <li>Mon - Fri</li>
+              <li>24 Hours</li>
+            </ul>
+          </div>
+          <div>
+            <h2 class=" uppercase text-bold text-xl">Contact Us</h2>
+            <ul class="">
+              <li class="flex ">
+                <img class="w-10" src="./images/phone.svg" alt="" srcset="" /><a
+                  class="py-6 text-sm"
+                  href=""
+                  >+92 349 2140170</a
+                >
+              </li>
+              <li class="flex ">
+                <img class="w-10" src="./images/email.svg" alt="" srcset="" /><a
+                  class="py-4 text-xs"
+                  href=""
+                  >info@islamicscholarscenter.com</a
+                >
+              </li>
+
+              <li class="flex ">
+                <img
+                  class="w-10"
+                  src="./images/location.svg"
+                  alt=""
+                  srcset=""
+                /><a class="py-4 text-xs" href=""
+                  >Office # 21, Adil Hayat Plaza, Khanna Pull, Islamabad,
+                  Pakistan.</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+      <!-- footerend -->
     </div>
   </body>
 </html>
+
+<script src="./custom.js"></script>
